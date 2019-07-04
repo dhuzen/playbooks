@@ -1,0 +1,26 @@
+---
+# TASKS FOR BASIC HOST CONFIGURATION
+
+# UPDATE THE HOST THROUGH YUM
+- name: Update the host with the latest packages
+  yum:
+    name: '*'
+    state: latest
+  
+# INSTALL BASIC PACKAGES
+- name: Install the common packages (new style)
+  yum:
+    name: "{{ common_packages }}"
+    state: "installed"
+
+# COPY SSH KEYS FOR ACCESS
+#############################################
+#- name: Set authorized key from file
+# authorized_key:
+#   user: vagrant
+#   state: present
+#    key: "{{ lookup('file', '/home/charlie/.ssh/id_rsa.pub') }}"
+
+# Disable SELinux
+- selinux:
+    state: disabled
