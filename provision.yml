@@ -1,4 +1,7 @@
 ---
+
+- hosts: all
+  become: yes
 # TASKS FOR BASIC HOST CONFIGURATION
 
 # UPDATE THE HOST THROUGH YUM
