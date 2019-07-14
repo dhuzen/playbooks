@@ -8,10 +8,10 @@
     state: latest
   
 # INSTALL BASIC PACKAGES
-#- name: Install the common packages (new style)
-#  yum:
-#    name: "{{ common_packages }}"
-#    state: "installed"
+- name: Install the common packages (new style)
+  yum:
+    name: "{{ common_packages }}"
+    state: "installed"
 
 # COPY SSH KEYS FOR ACCESS
 #############################################
